@@ -1,0 +1,13 @@
+diff --git a/modules/freebsd/vmhgfs/vnopscommon.c b/modules/freebsd/vmhgfs/vnopscommon.c
+index 17dc3e2..646b5e8 100644
+--- a/modules/freebsd/vmhgfs/vnopscommon.c
++++ b/modules/freebsd/vmhgfs/vnopscommon.c
+@@ -758,7 +758,7 @@ HgfsCloseInt(struct vnode *vp, // IN: Vnode to close.
+       break;
+    }
+    DEBUG(VM_DEBUG_LOG, "Exit %s.\n",  HGFS_VP_TO_FILENAME(vp));
+-   return 0;
++   return ret;
+ }
+ 
+ 

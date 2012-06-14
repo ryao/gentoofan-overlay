@@ -1,0 +1,13 @@
+diff --git a/modules/freebsd/vmhgfs/Makefile b/modules/freebsd/vmhgfs/Makefile
+index 9aaba68..c7fd00a 100644
+--- a/modules/freebsd/vmhgfs/Makefile
++++ b/modules/freebsd/vmhgfs/Makefile
+@@ -47,7 +47,7 @@ COMMON_SRCS += backdoorGcc32.c
+ .endif
+ 
+ COMMON_HGFS_SRCS := debug.c
+-COMMON_HGFS_SRCS := bdhandler.c
++COMMON_HGFS_SRCS += bdhandler.c
+ COMMON_HGFS_SRCS += request.c
+ COMMON_HGFS_SRCS += worker.c
+ COMMON_HGFS_SRCS += fsutil.c
