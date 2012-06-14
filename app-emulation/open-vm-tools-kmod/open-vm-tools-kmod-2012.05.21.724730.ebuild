@@ -70,6 +70,7 @@ src_prepare() {
 	epatch "$FILESDIR/$P-fbsd-vmhgfs-vnopscommon.patch"
 	epatch "$FILESDIR/$P-fbsd-vmhgfs-state.patch"
 	epatch "$FILESDIR/$P-fbsd-vmhgfs-kernel-stubs.patch"
+	epatch "$FILESDIR/$P-fbsd-vmmemctl-os.patch"
 	epatch "$FILESDIR/$P-fbsd-hgfscloseint-return.patch"
 	epatch_user
 }
@@ -113,6 +114,14 @@ src_install() {
 	then
 		dodir /boot/modules
 		cp "${S}"/modules/freebsd/*.ko{,.symbols} "${ED}/boot/modules"
+	fi
+}
+
+pkg_preinst()
+{
+	if use kernel_linux
+	then
+		linux-mod_pkg_preinst
 	fi
 }
 
