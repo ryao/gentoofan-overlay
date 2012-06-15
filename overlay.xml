@@ -10,6 +10,6 @@
       <name>Richard Yao</name>
     </owner>
     <source type="git">git://github.com/ryao/gentoofan-overlay.git</source>
-    <feed>https://github.com/ryao/gentofann-overlay/commits/master.atom</feed>
+    <feed>https://github.com/ryao/gentofan-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
