@@ -1,6 +1,6 @@
 To add this overlay to a Gentoo system, run the following command:
 
-layman -o https://raw.github.com/gentoofan/gentoofan-overlay/master/overlay.xml -f -a gentoofan
+layman -o https://raw.github.com/ryao/gentoofan-overlay/master/overlay.xml -f -a gentoofan
 
 Note that you must have both dev-vcs/git and app-portage/layman installed on
 your system for this to work.
