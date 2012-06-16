@@ -33,7 +33,8 @@ DEPEND="dev-lang/perl
 		!amd64? ( dev-libs/udis86 ) )"
 RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
-	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+	clang? ( !sys-devel/clang )"
 
 S=${WORKDIR}/${P}.src
 
@@ -276,7 +277,7 @@ src_install() {
 	fi
 
 	# Remove unnecessary headers on FreeBSD, bug #417171
-	use kernel_FreeBSD && rm "${ED}"usr/$(get_libdir)/clang/${PV}/include/{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
+	use kernel_FreeBSD && use clang && rm "${ED}"usr/$(get_libdir)/clang/${PV}/include/{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
 }
 
 pkg_postinst() {
